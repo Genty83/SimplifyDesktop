@@ -6,9 +6,84 @@
   <title>My Secure Electron App</title>
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../src/style.css">
+
 </head>
 <body>
-  <h1>My Secure Electron App</h1>
-  <p>Welcome to your secure Electron app with Handlebars!</p>
+  <div class="app-container">
+    <div class="titlebar flex-row justify-between">
+      <!-- Titlebar Left -->
+      <div class="flex-row align-center base-gap">
+        <button class="btn titlebar-btn">
+          File
+        </button>
+        <button class="btn titlebar-btn">
+          Edit
+        </button>
+        <button class="btn titlebar-btn">
+          View
+        </button>
+        <button class="btn titlebar-btn">
+          Help
+        </button>
+      </div>
+      
+      <!-- Titlebar Right -->
+      <div class="flex-row align-center base-gap">
+      
+        <!-- Titlebar Window Buttons -->
+        <button
+          id="minimize-btn"
+          class="icon-btn titlebar-btn tooltip-bottom-right"
+          tooltip="Minimize"
+        >
+          <i class="fas fa-minus"></i>
+        </button>
+        <button
+          id="maximize-btn"
+          class="icon-btn titlebar-btn tooltip-bottom-right"
+          tooltip="Maximize/Restore"
+        >
+          <i class="far fa-square"></i>
+        </button>
+        <button
+          id="close-btn"
+          class="icon-btn titlebar-btn tooltip-bottom-right"
+          tooltip="Close"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+      
+      </div>    </div>
+    <div class="center-container">
+      <div class="sidebar">
+
+      </div>
+      <div class="explorer">
+
+      </div>
+      <div class="vertical-center-container">
+        <div class="loader"></div>
+        <div class="breadcrumb">
+
+        </div>
+        <div class="page-container">
+
+        </div>
+        <div class="bottom-menu">
+
+        </div>
+      </div>
+      <div class="right-menu">
+
+      </div>
+    </div>
+    <div class="bottombar">
+
+    </div>
+  </div>
 </body>
 </html>

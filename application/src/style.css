@@ -1,0 +1,329 @@
+/**
+* This is the main stylesheet for the application.
+* It is used to define the global styles for the application.
+*/
+:root {
+  /* Base varibales */
+  --app-bd-color: #2e3235;
+  --base-radius: 8px;
+  --base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --base-transition: all 0.3s ease;
+  --base-padding: 0.5rem;
+  --base-gap: 0.5rem;
+  --component-spacing: 1px;
+  --base-font-size: 12px;
+  --base-font-family: 'Segoe UI', sans-serif;
+  --base-font-weight: 400;
+  /* Titlebar Variables */
+  --titlebar-bg-color: #191b1d;
+  --titlebar-bd-color: #3a3e42;
+  --titlebar-fg-color: #a8afb7;
+  --titlebar-height: 40px;
+  --titlebar-btn-hover-bg-color: #3a3e42;
+  --titlebar-btn-hover-fg-color: #ffffff;
+  --titlebar-btn-close-hover-bg-color: #e81123;
+  /* Bottombar Variables */
+  --bottombar-bg-color: #0e0f0f;
+  --bottombar-fg-color: #a8afb7;
+  --bottombar-height: 30px;
+  --bottombar-btn-hover-bg-color: #2e3235;
+  --bottombar-btn-hover-fg-color: #ffffff;
+  /* Sidebar Variables */
+  --sidebar-bg-color: #191b1d;
+  --sidebar-fg-color: #a8afb7;
+  --sidebar-width: 50px;
+  --sidebar-btn-hover-bg-color: #3a3e42;
+  --sidebar-btn-hover-fg-color: #ffffff;
+  /* Explorer Variables */
+  --explorer-bg-color: #191b1d;
+  --explorer-bd-color: #3a3e42;
+  --explorer-fg-color: #a8afb7;
+  --explorer-width: 300px;
+  --explorer-btn-hover-bg-color: #3a3e42;
+  --explorer-btn-hover-fg-color: #ffffff;
+  --explorer-resizer-hover-bg-color: #2e2be2;
+  /* Right Menu Variables */
+  --right-menu-bg-color: #191b1d;
+  --right-menu-bd-color: #3a3e42;
+  --right-menu-fg-color: #a8afb7;
+  --right-menu-width: 200px;
+  --right-menu-btn-hover-bg-color: #3a3e42;
+  --right-menu-btn-hover-fg-color: #ffffff;
+  /* Breadcrumb Variables */
+  --breadcrumb-bg-color: #191b1d;
+  --breadcrumb-fg-color: #a8afb7;
+  --breadcrumb-height: 35px;
+  --breadcrumb-btn-hover-bg-color: #3a3e42;
+  --breadcrumb-btn-hover-fg-color: #ffffff;
+  /* Content Variables */
+  --content-bg-color: #2a2c2e;
+  --content-fg-color: #a8afb7;
+  --content-padding: 1rem;
+  /* Bottom Menu Variables */
+  --bottom-menu-bg-color: #191b1d;
+  --bottom-menu-bd-color: #3a3e42;
+  --bottom-menu-fg-color: #a8afb7;
+  --bottom-menu-height: 200px;
+  --bottom-menu-btn-hover-bg-color: #3a3e42;
+  --bottom-menu-btn-hover-fg-color: #ffffff;
+  --bottom-menu-resizer-hover-bg-color: #2e2be2;
+  /* Tooltip Variables */
+  --tooltip-bg-color: #191b1d;
+  --tooltip-fg-color: #a8afb7;
+  --tooltip-bd-color: #3a3e42;
+  --tooltip-shadow-color: #00000055;
+}
+
+/*
+SECTION [1] - RESET STYLES
+------------------------------------------
+This section contains the reset styles for the application.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+SECTION [2] - UI STYLES
+------------------------------------------
+This section contains the ui styles for the application,
+buttons, etc.
+*/
+
+.btn {
+  background-color: transparent;
+  color: var(--content-fg-color);
+  border: none;
+  padding: var(--base-padding);
+  cursor: pointer;
+  transition: var(--base-transition);
+  outline: none;
+  text-decoration: none;
+}
+
+.icon-btn {
+  background-color: transparent;
+  color: var(--content-fg-color);
+  border: none;
+  padding: var(--base-padding);
+  cursor: pointer;
+  transition: var(--base-transition);
+  outline: none;
+  text-decoration: none;
+}
+
+.titlebar-btn {
+  padding: 0.4rem;
+  border-radius: var(--base-radius);
+}
+
+.titlebar-btn:hover {
+  background-color: var(--titlebar-btn-hover-bg-color);
+  color: var(--titlebar-btn-hover-fg-color);
+}
+
+.titlebar-btn.close-btn:hover {
+  background-color: var(--titlebar-btn-close-hover-bg-color);
+  color: var(--titlebar-btn-hover-fg-color);
+}
+
+
+/*
+SECTION [3] - COMPONENT STYLES
+------------------------------------------
+This section contains the ui styles for the application.
+*/
+
+.app-container {
+  display: grid;
+  grid-template-rows: var(--titlebar-height) 1fr var(--bottombar-height);
+  font-family: var(--base-font-family);
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
+  width: 100vw;
+  height: 100vh;
+  background: var(--app-bd-color);
+  gap: var(--component-spacing);
+}
+
+.titlebar {
+  background-color: var(--titlebar-bg-color);
+  color: var(--titlebar-fg-color);
+  padding-inline: var(--base-padding);
+}
+
+.center-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: var(--component-spacing);
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-fg-color);
+  width: var(--sidebar-width);
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.explorer {
+  background-color: var(--explorer-bg-color);
+  color: var(--explorer-fg-color);
+  width: var(--explorer-width);
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.vertical-center-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto var(--breadcrumb-height) 1fr auto;
+}
+
+.right-menu {
+  background-color: var(--right-menu-bg-color);
+  color: var(--right-menu-fg-color);
+  width: var(--right-menu-width);
+  height: 100%;
+  flex-shrink: 0;
+  display: none;
+}
+
+.breadcrumb {
+  background-color: var(--breadcrumb-bg-color);
+  color: var(--breadcrumb-fg-color);
+  height: var(--breadcrumb-height);
+}
+
+.page-container {
+  background-color: var(--content-bg-color);
+  color: var(--content-fg-color);
+  padding: var(--content-padding);
+  overflow: auto;
+  gap: var(--component-spacing);
+  border-top: var(--component-spacing) solid var(--app-bd-color);
+  border-bottom: var(--component-spacing) solid var(--app-bd-color);
+}
+
+.bottom-menu {
+  background-color: var(--bottom-menu-bg-color);
+  color: var(--bottom-menu-fg-color);
+  height: var(--bottom-menu-height);
+}
+
+.bottombar {
+  background-color: var(--bottombar-bg-color);
+  color: var(--bottombar-fg-color);
+}
+
+/*
+SECTION [4] - GENERIC STYLES
+------------------------------------------
+This section contains the generic classes for
+the application.
+*/
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-col-wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+} 
+
+.base-gap {
+  gap: var(--base-gap);
+}
+
+/*
+SECTION [5] - TOOLTIP STYLES
+------------------------------------------
+This section contains the tooltip styles for
+the application.
+*/
+[tooltip] {
+  position: relative;
+}
+
+[tooltip]:hover::after {
+  content: attr(tooltip);
+  position: absolute;
+  padding: 0.6rem;
+  background-color: var(--tooltip-bg-color);
+  color: var(--tooltip-fg-color);
+  border: 1px solid var(--tooltip-bd-color);
+  border-radius: var(--base-radius);
+  box-shadow: 0 0 5px var(--tooltip-shadow-color);
+  font-size: 0.8rem;
+  z-index: 99999;
+  text-wrap: nowrap;
+  font-size: 0.7rem;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 1.5s ease-in forwards, fadeOut 1.5s ease-in 3s forwards;
+}
+
+[tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-bottom-left::after {
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.tooltip-bottom-right::after {
+  top: calc(100% + 10px);
+  right: 0;
+}
+
+.tooltip-top-left::after {
+  bottom: calc(100% + 10px);
+  left: 0;
+}
+
+.tooltip-top-right::after {
+  bottom: calc(100% + 10px);
+  right: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
