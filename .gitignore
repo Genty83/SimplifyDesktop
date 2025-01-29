@@ -128,3 +128,25 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Editor configuration files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# Build directories
+*.exe
+*.dll
+*.so
+
+# Temporary files
+*.bak
+*.swp
