@@ -15,14 +15,14 @@
 <body>
   <div class="app-container">
     <div class="titlebar flex-row justify-between">
-      {{> titlebar}}
+      {{> titlebar }}
     </div>
     <div class="center-container">
-      <div class="sidebar">
-
+      <div class="sidebar flex-col justify-between">
+        {{> sidebar }}
       </div>
-      <div class="explorer">
-
+      <div class="explorer flex-col base-gap">
+        {{> explorer }}
       </div>
       <div class="vertical-center-container">
         <div class="loader"></div>
@@ -40,8 +40,8 @@
 
       </div>
     </div>
-    <div class="bottombar">
-
+    <div class="bottombar flex-row align-center justify-between"> 
+      {{> bottombar }}  
     </div>
   </div>
 </body>

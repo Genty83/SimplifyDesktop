@@ -5,8 +5,8 @@ const fs = require("fs");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1100,
+    height: 700,
     frame: false,
     webPreferences: {
       preload: path.join(__dirname, "..", "preload.js"),
@@ -18,7 +18,14 @@ function createWindow() {
     },
   });
 
-  // Ensure partials directory exists
+  win.on('maximize', () => {
+    win.webContents.send('window-is-maximized');
+  });
+
+  win.on('unmaximize', () => {
+    win.webContents.send('window-is-unmaximized');
+  });
+
   const partialsDir = path.join(__dirname, "..", "templates", "partials");
   if (fs.existsSync(partialsDir)) {
     const partials = fs.readdirSync(partialsDir);
@@ -31,7 +38,6 @@ function createWindow() {
     console.warn("Partials directory does not exist");
   }
 
-  // Load and compile the main template
   const templatePath = path.join(__dirname, "..", "templates", "base.handlebars");
   if (fs.existsSync(templatePath)) {
     const template = fs.readFileSync(templatePath, "utf8");
@@ -46,10 +52,13 @@ function createWindow() {
   }
 
   ipcMain.on("window-minimize", () => win.minimize());
-  ipcMain.on("window-maximize", () =>
-    win.isMaximized() ? win.unmaximize() : win.maximize()
-  );
-  ipcMain.on("window-restore", () => win.restore());
+  ipcMain.on("window-maximize", () => {
+    if (win.isMaximized()) {
+      win.unmaximize();
+    } else {
+      win.maximize();
+    }
+  });
   ipcMain.on("window-close", () => win.close());
 }
 

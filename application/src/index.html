@@ -59,12 +59,46 @@
       
       </div>    </div>
     <div class="center-container">
-      <div class="sidebar">
-
-      </div>
-      <div class="explorer">
-
-      </div>
+      <div class="sidebar flex-col justify-between">
+        <!-- Sidebar Top -->  
+        <div class="flex-col base-gap">
+          <button class="icon-btn sidebar-btn tooltip-bottom-left" tooltip="Sidebar Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="sidebar-seperator"></div>
+          <button class="icon-btn sidebar-btn tooltip-bottom-left" tooltip="Home">
+            <i class="fas fa-home"></i>
+          </button>
+        </div>
+        
+        <!-- Sidebar Bottom -->
+        <div class="flex-col base-gap">
+          <div class="sidebar-seperator"></div>
+          <button class="icon-btn sidebar-btn tooltip-top-left" tooltip="Information">
+            <i class="fas fa-info-circle"></i>
+          </button>
+          <button class="icon-btn sidebar-btn tooltip-top-left" tooltip="Help">
+            <i class="fas fa-question-circle"></i>
+          </button>
+          <button class="icon-btn sidebar-btn tooltip-top-left" tooltip="Settings">
+            <i class="fas fa-cog"></i>
+          </button>
+        </div>      </div>
+      <div class="explorer flex-col base-gap">
+        <div class="explorer-resizer"></div>
+        
+        <div class="flex-row align-center justify-between">
+          <p>
+            Explorer
+          </p>
+          <button class="icon-btn explorer-btn tooltip-bottom-right" tooltip="Explorer Menu">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+        
+        <div class="treeview-container flex-col">
+        
+        </div>      </div>
       <div class="vertical-center-container">
         <div class="loader"></div>
         <div class="breadcrumb">
@@ -81,8 +115,19 @@
 
       </div>
     </div>
-    <div class="bottombar">
-
+    <div class="bottombar flex-row align-center justify-between"> 
+      <div class="flex-row base-gap">
+        <p>
+          Created By: Craig Gent
+        </p>
+        <p>
+          Version: 1.0.0
+        </p>
+      </div>
+      
+      <div class="flex-row base-gap">
+      
+      </div>
     </div>
   </div>
 </body>

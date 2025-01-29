@@ -34,11 +34,14 @@
   --sidebar-width: 50px;
   --sidebar-btn-hover-bg-color: #3a3e42;
   --sidebar-btn-hover-fg-color: #ffffff;
+  --sidebar-seperator-bg-color: #3a3e42;
   /* Explorer Variables */
   --explorer-bg-color: #191b1d;
   --explorer-bd-color: #3a3e42;
   --explorer-fg-color: #a8afb7;
   --explorer-width: 300px;
+  --explorer-min-width: 200px;
+  --explorer-max-width: 550px;
   --explorer-btn-hover-bg-color: #3a3e42;
   --explorer-btn-hover-fg-color: #ffffff;
   --explorer-resizer-hover-bg-color: #2e2be2;
@@ -116,21 +119,10 @@ buttons, etc.
   text-decoration: none;
 }
 
-.titlebar-btn {
-  padding: 0.4rem;
-  border-radius: var(--base-radius);
+.icon-btn:hover {
+  background-color: var(--content-bg-color);
+  color: var(--content-fg-color);
 }
-
-.titlebar-btn:hover {
-  background-color: var(--titlebar-btn-hover-bg-color);
-  color: var(--titlebar-btn-hover-fg-color);
-}
-
-.titlebar-btn.close-btn:hover {
-  background-color: var(--titlebar-btn-close-hover-bg-color);
-  color: var(--titlebar-btn-hover-fg-color);
-}
-
 
 /*
 SECTION [3] - COMPONENT STYLES
@@ -148,12 +140,30 @@ This section contains the ui styles for the application.
   height: 100vh;
   background: var(--app-bd-color);
   gap: var(--component-spacing);
+  user-select: none;
 }
 
 .titlebar {
   background-color: var(--titlebar-bg-color);
   color: var(--titlebar-fg-color);
   padding-inline: var(--base-padding);
+  -webkit-app-region: drag;
+}
+
+.titlebar-btn {
+  padding: 0.4rem;
+  border-radius: var(--base-radius);
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-btn:hover {
+  background-color: var(--titlebar-btn-hover-bg-color);
+  color: var(--titlebar-btn-hover-fg-color);
+}
+
+.titlebar-btn.close-btn:hover {
+  background-color: var(--titlebar-btn-close-hover-bg-color);
+  color: var(--titlebar-btn-hover-fg-color);
 }
 
 .center-container {
@@ -163,20 +173,70 @@ This section contains the ui styles for the application.
   gap: var(--component-spacing);
 }
 
+.sidebar-seperator {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--sidebar-seperator-bg-color);
+  opacity: 0.5;
+}
+
 .sidebar {
   background-color: var(--sidebar-bg-color);
   color: var(--sidebar-fg-color);
   width: var(--sidebar-width);
   height: 100%;
   flex-shrink: 0;
+  padding: 0.3rem;
+}
+
+.sidebar-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: var(--base-radius);
+  transition: var(--base-transition);
 }
 
 .explorer {
   background-color: var(--explorer-bg-color);
   color: var(--explorer-fg-color);
   width: var(--explorer-width);
+  min-width: var(--explorer-min-width);
+  max-width: var(--explorer-max-width);
   height: 100%;
   flex-shrink: 0;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.explorer-btn {
+  padding: 0.5rem;
+  border-radius: var(--base-radius);
+}
+
+.explorer-btn:hover {
+  background-color: var(--explorer-btn-hover-bg-color);
+  color: var(--explorer-btn-hover-fg-color);
+}
+
+.explorer-resizer {
+  position: absolute;
+  bottom: 0;
+  right: -4px;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  transition: var(--base-transition);
+}
+
+.explorer-resizer:hover {
+  background-color: var(--explorer-resizer-hover-bg-color);
+}
+
+.treeview-container {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--base-radius);
+  border: 1px solid var(--explorer-bd-color);
 }
 
 .vertical-center-container {
@@ -220,6 +280,7 @@ This section contains the ui styles for the application.
 .bottombar {
   background-color: var(--bottombar-bg-color);
   color: var(--bottombar-fg-color);
+  padding-inline: var(--base-padding);
 }
 
 /*
