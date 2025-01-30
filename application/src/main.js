@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const handlebars = require('handlebars');
 const fs = require('fs');
+const handlebars = require('handlebars');
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -9,7 +9,7 @@ function createWindow() {
     height: 700,
     frame: false,
     webPreferences: {
-      preload: path.join(__dirname, '..', 'preload.js'), // Revert back to preload.js
+      preload: path.join(__dirname, 'preload.js'), // Adjust the path to preload.js
       contextIsolation: true,
       enableRemoteModule: false,
       nodeIntegration: false,
@@ -25,6 +25,8 @@ function createWindow() {
   win.on('unmaximize', () => {
     win.webContents.send('window-is-unmaximized');
   });
+
+  // Add theme support
 
   const partialsDir = path.join(__dirname, '..', 'templates', 'partials');
   if (fs.existsSync(partialsDir)) {
@@ -60,6 +62,24 @@ function createWindow() {
     }
   });
   ipcMain.on('window-close', () => win.close());
+
+  // Handle theme request and send theme data to renderer
+  ipcMain.on('request-theme', (event) => {
+    const themePath = path.join(__dirname, 'themes', 'defaultLight.json');
+    fs.readFile(themePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading theme JSON file:', err);
+        return;
+      }
+
+      try {
+        const theme = JSON.parse(data);
+        event.sender.send('apply-theme', theme);
+      } catch (parseError) {
+        console.error('Error parsing theme JSON data:', parseError);
+      }
+    });
+  });
 }
 
 app.whenReady().then(createWindow);

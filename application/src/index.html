@@ -67,6 +67,7 @@
         >
           <i class="fas fa-minus"></i>
         </button>
+      
         <button
           id="maximize-btn"
           class="icon-btn titlebar-btn tooltip-bottom-right"
@@ -74,9 +75,10 @@
         >
           <i class="far fa-square"></i>
         </button>
+      
         <button
           id="close-btn"
-          class="icon-btn titlebar-btn tooltip-bottom-right"
+          class="icon-btn titlebar-btn close-btn tooltip-bottom-right"
           tooltip="Close"
         >
           <i class="fas fa-xmark"></i>
@@ -156,9 +158,15 @@
           
           </div>        </div>
       </div>
-      <div class="right-menu">
-
-      </div>
+      <div class="right-menu flex-col base-gap">
+        <div class="flex-row align-center justify-between">
+          <p>Right Menu</p>
+          <button class="icon-btn close-btn tooltip-bottom-right" tooltip="Close Right Menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="right-menu-content"></div>      </div>
     </div>
     <div class="bottombar flex-row align-center justify-between"> 
       <div class="flex-row base-gap">

@@ -21,7 +21,6 @@
   --titlebar-height: 40px;
   --titlebar-btn-hover-bg-color: #3a3e42;
   --titlebar-btn-hover-fg-color: #ffffff;
-  --titlebar-btn-close-hover-bg-color: #e81123;
   /* Bottombar Variables */
   --bottombar-bg-color: #0e0f0f;
   --bottombar-fg-color: #a8afb7;
@@ -75,6 +74,12 @@
   --tooltip-fg-color: #a8afb7;
   --tooltip-bd-color: #3a3e42;
   --tooltip-shadow-color: #00000055;
+  /* Treeview Variables */
+
+  /* Tab Bar Variables */
+
+  /* Ui Varaiables */
+  --btn-close-hover-color: #e81123;
 }
 
 /*
@@ -91,48 +96,16 @@ This section contains the reset styles for the application.
 }
 
 /*
-SECTION [2] - UI STYLES
-------------------------------------------
-This section contains the ui styles for the application,
-buttons, etc.
-*/
-
-.btn {
-  background-color: transparent;
-  color: var(--content-fg-color);
-  border: none;
-  padding: var(--base-padding);
-  cursor: pointer;
-  transition: var(--base-transition);
-  outline: none;
-  text-decoration: none;
-  font-family: var(--base-font-family);
-  font-weight: var(--base-font-weight);
-  font-size: var(--base-font-size);
-}
-
-.icon-btn {
-  background-color: transparent;
-  color: var(--content-fg-color);
-  border: none;
-  padding: var(--base-padding);
-  cursor: pointer;
-  transition: var(--base-transition);
-  outline: none;
-  text-decoration: none;
-}
-
-.icon-btn:hover {
-  background-color: var(--content-bg-color);
-  color: var(--content-fg-color);
-}
-
-/*
-SECTION [3] - COMPONENT STYLES
+SECTION [2] - COMPONENT STYLES
 ------------------------------------------
 This section contains the ui styles for the application.
 */
 
+/*
+------------------------------------------
+App Container Styles
+------------------------------------------
+*/
 .app-container {
   display: grid;
   grid-template-rows: var(--titlebar-height) 1fr var(--bottombar-height);
@@ -146,6 +119,11 @@ This section contains the ui styles for the application.
   user-select: none;
 }
 
+/*
+------------------------------------------
+Titlebar Styles
+------------------------------------------
+*/
 .titlebar {
   background-color: var(--titlebar-bg-color);
   color: var(--titlebar-fg-color);
@@ -164,11 +142,11 @@ This section contains the ui styles for the application.
   color: var(--titlebar-btn-hover-fg-color);
 }
 
-.titlebar-btn.close-btn:hover {
-  background-color: var(--titlebar-btn-close-hover-bg-color);
-  color: var(--titlebar-btn-hover-fg-color);
-}
-
+/*
+------------------------------------------
+Center Container Styles
+------------------------------------------
+*/
 .center-container {
   width: 100%;
   height: 100%;
@@ -176,6 +154,11 @@ This section contains the ui styles for the application.
   gap: var(--component-spacing);
 }
 
+/*
+------------------------------------------
+Sidebar Styles
+------------------------------------------
+*/
 .sidebar-seperator {
   width: 100%;
   height: 1px;
@@ -199,6 +182,11 @@ This section contains the ui styles for the application.
   transition: var(--base-transition);
 }
 
+/*
+------------------------------------------
+Explorer Styles
+------------------------------------------
+*/
 .explorer {
   background-color: var(--explorer-bg-color);
   color: var(--explorer-fg-color);
@@ -236,6 +224,11 @@ This section contains the ui styles for the application.
   background-color: var(--explorer-resizer-hover-bg-color);
 }
 
+/*
+------------------------------------------
+Treeview Styles
+------------------------------------------
+*/
 .treeview-container {
   width: 100%;
   height: 100%;
@@ -243,6 +236,11 @@ This section contains the ui styles for the application.
   border: 1px solid var(--explorer-bd-color);
 }
 
+/*
+------------------------------------------
+Vertical Center Styles
+------------------------------------------
+*/
 .vertical-center-container {
   height: 100%;
   width: 100%;
@@ -250,20 +248,42 @@ This section contains the ui styles for the application.
   grid-template-rows: auto var(--breadcrumb-height) 1fr auto;
 }
 
+/*
+------------------------------------------
+Right Menu Styles
+------------------------------------------
+*/
 .right-menu {
   background-color: var(--right-menu-bg-color);
   color: var(--right-menu-fg-color);
   width: var(--right-menu-width);
   height: 100%;
   flex-shrink: 0;
+  padding: var(--base-padding);
 }
 
+.right-menu-content {
+  border: 1px solid var(--right-menu-bd-color);
+  border-radius: var(--base-radius);
+  width: 100%;
+  height: 100%;
+}
+
+/*
+------------------------------------------
+Breadcrumb Styles
+------------------------------------------
+*/
 .breadcrumb {
   background-color: var(--breadcrumb-bg-color);
   color: var(--breadcrumb-fg-color);
   height: var(--breadcrumb-height);
 }
-
+/*
+------------------------------------------
+Content Styles
+------------------------------------------
+*/
 .page-container {
   background-color: var(--content-bg-color);
   color: var(--content-fg-color);
@@ -273,7 +293,11 @@ This section contains the ui styles for the application.
   border-top: var(--component-spacing) solid var(--app-bd-color);
   border-bottom: var(--component-spacing) solid var(--app-bd-color);
 }
-
+/*
+------------------------------------------
+Bottom Menu Styles
+------------------------------------------
+*/
 .bottom-menu {
   background-color: var(--bottom-menu-bg-color);
   color: var(--bottom-menu-fg-color);
@@ -319,7 +343,7 @@ This section contains the ui styles for the application.
 }
 
 /*
-SECTION [4] - GENERIC STYLES
+SECTION [3] - GENERIC STYLES
 ------------------------------------------
 This section contains the generic classes for
 the application.
@@ -366,7 +390,7 @@ the application.
 }
 
 /*
-SECTION [5] - TOOLTIP STYLES
+SECTION [4] - TOOLTIP STYLES
 ------------------------------------------
 This section contains the tooltip styles for
 the application.
@@ -426,4 +450,51 @@ the application.
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+/*
+SECTION [2] - UI STYLES
+------------------------------------------
+This section contains the ui styles for the application,
+buttons, etc.
+*/
+
+/*
+------------------------------------------
+Button Styles
+------------------------------------------
+*/
+.btn {
+  background-color: transparent;
+  color: var(--content-fg-color);
+  border: none;
+  padding: var(--base-padding);
+  cursor: pointer;
+  transition: var(--base-transition);
+  outline: none;
+  text-decoration: none;
+  font-family: var(--base-font-family);
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
+}
+
+.icon-btn {
+  background-color: transparent;
+  color: var(--content-fg-color);
+  border: none;
+  padding: var(--base-padding);
+  cursor: pointer;
+  transition: var(--base-transition);
+  outline: none;
+  text-decoration: none;
+  border-radius: var(--base-radius);
+}
+
+.icon-btn:hover {
+  background-color: var(--content-bg-color);
+  color: var(--content-fg-color);
+}
+
+.close-btn:hover {
+  background-color: var(--btn-close-hover-color);
 }
