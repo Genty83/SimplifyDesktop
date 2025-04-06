@@ -7,6 +7,7 @@
   border-right: 1px solid var(--component-border-clr);
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: var(--base-gap);
   width: 300px;
 }

@@ -2,6 +2,7 @@ import Titlebar from "./components/titlebar/titlebar";
 import Sidebar from "./components/sidebar/sidebar";
 import Bottombar from "./components/bottombar/bottombar";
 import NavMenu from "./components/nav-menu/nav-menu";
+import Breadcrumb from "./components/breadcrumb/breadcrumb";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Titlebar />
       <Sidebar />
       <NavMenu />
+      <Breadcrumb />
       <Bottombar />
     </div>
   );

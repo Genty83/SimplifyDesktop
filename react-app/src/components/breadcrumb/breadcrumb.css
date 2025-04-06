@@ -1,0 +1,9 @@
+.breadcrumb {
+  grid-area: breadcrumb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--component-bg-clr);
+  border-bottom: 1px solid var(--component-border-clr);
+  flex-shrink: 0;
+}
