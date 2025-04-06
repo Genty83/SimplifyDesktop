@@ -41,56 +41,32 @@ button {
     "bottombar bottombar bottombar";
 }
 
-.titlebar {
-  grid-area: titlebar;
-  background-color: var(--titlebar-bg-clr);
-  color: var(--titlebar-fg-clr);
-  border-bottom: 1px solid var(--titlebar-border-clr);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.3rem
-}
 
-.titlebar > div {
-  display: flex;
-  align-items: center;
-  gap: var(--base-gap);
-  height: 100%;
-}
-
-.titlebar-btn {
-  transition: var(--base-transition);
-  border-radius: var(--base-radius);
-  height: 100%;
-  padding: 0 0.5rem;
-}
-
-.titlebar-btn:hover {
-  background-color: color-mix(in hsl, var(--titlebar-bg-clr) 80%, var(--color-mix-light) 10%);
-}
-
-.titlebar-btn:active {
-  background-color: color-mix(in hsl, var(--titlebar-bg-clr) 80%, var(--color-mix-light) 20%);
-}
-
-/* Sidebar */
-.sidebar {
-  grid-area: sidebar;
+/* Nav menu */
+.nav-menu {
+  position: relative;
+  grid-area: nav-menu;
   background-color: var(--component-bg-clr);
   color: var(--component-fg-clr);
   border-right: 1px solid var(--component-border-clr);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: var(--base-gap);
+  width: 300px;
 }
 
-.sidebar > div {
-  display: flex;
-  flex-direction: column;
-  gap: var(--base-gap);
-  padding: var(--base-padding);
+.nav-menu-resizer {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  transition: var(--base-transition);
+}
+
+.nav-menu-resizer:hover {
+  background-color: var(--accent-clr);
 }
 
 /* Bottombar */

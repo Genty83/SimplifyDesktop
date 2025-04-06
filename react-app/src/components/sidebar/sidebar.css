@@ -1,0 +1,18 @@
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--component-bg-clr);
+  color: var(--component-fg-clr);
+  border-right: 1px solid var(--component-border-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--base-gap);
+}
+
+.sidebar > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-gap);
+  padding: var(--base-padding);
+}

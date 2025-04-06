@@ -1,4 +1,5 @@
-import Button from "./button";
+import Button from "../button";
+import "./titlebar.css";
 
 const titlebar = () => {
   return (
