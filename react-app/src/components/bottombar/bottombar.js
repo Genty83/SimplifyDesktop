@@ -1,4 +1,4 @@
-
+import './bottombar.css';
 
 const Bottombar = () => {
   return (

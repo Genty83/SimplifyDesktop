@@ -1,4 +1,4 @@
-
+import './nav-menu.css';
 
 const NavMenu = () => {
   return (

@@ -1,7 +1,7 @@
 import Titlebar from "./components/titlebar/titlebar";
 import Sidebar from "./components/sidebar/sidebar";
-import Bottombar from "./components/bottombar";
-import NavMenu from "./components/nav-menu";
+import Bottombar from "./components/bottombar/bottombar";
+import NavMenu from "./components/nav-menu/nav-menu";
 
 function App() {
   return (

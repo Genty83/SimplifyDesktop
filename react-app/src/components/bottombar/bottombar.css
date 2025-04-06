@@ -1,0 +1,11 @@
+/* Bottombar */
+.bottombar {
+  grid-area: bottombar;
+  background-color: var(--bottombar-bg-clr);
+  color: var(--bottombar-fg-clr);
+  border-top: 1px solid var(--bottombar-border-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--base-padding);
+}
