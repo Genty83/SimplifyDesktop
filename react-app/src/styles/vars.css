@@ -1,0 +1,28 @@
+[data-theme='dark'] {
+  --canvas-bg-clr: hsl(210, 9%, 10%);
+  --titlebar-bg-clr: hsl(210, 9%, 15%);
+  --bottombar-bg-clr: hsl(210, 9%, 15%);
+  --component-bg-clr: hsl(210, 9%, 15%);
+  --page-bg-clr: hsl(210, 9%, 20%);
+
+  --titlebar-fg-clr: hsl(210, 9%, 90%);
+  --bottombar-fg-clr: hsl(210, 9%, 90%);
+  --component-fg-clr: hsl(210, 9%, 90%);
+  --page-fg-clr: hsl(210, 9%, 90%);
+
+  --titlebar-border-clr: hsl(210, 9%, 20%);
+  --bottombar-border-clr: hsl(210, 9%, 20%);
+  --component-border-clr: hsl(210, 9%, 20%);
+  --page-border-clr: hsl(210, 9%, 30%);
+
+  --font-family: 'Inter', sans-serif;
+  --font-size: 0.8rem;
+  --font-weight: 400;
+  --base-gap: 0.3rem;
+  --base-padding: 0.3rem;
+  --base-radius: 6px;
+  --base-transition: 0.3s ease-in-out;
+
+  --color-mix-light: hsl(0, 0%, 100%);
+  --color-mix-dark: hsl(0, 0%, 0%);
+}

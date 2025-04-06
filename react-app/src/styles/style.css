@@ -1,0 +1,106 @@
+/* Reset Style */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--canvas-bg-clr);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 60px auto 1fr;
+  grid-template-rows: 40px auto 25px 1fr auto 30px;
+  grid-template-areas:
+    "titlebar titlebar titlebar"
+    "sidebar nav-menu breadcrumb"
+    "sidebar nav-menu toast"
+    "sidebar nav-menu content"
+    "sidebar nav-menu bottom-menu"
+    "bottombar bottombar bottombar";
+}
+
+.titlebar {
+  grid-area: titlebar;
+  background-color: var(--titlebar-bg-clr);
+  color: var(--titlebar-fg-clr);
+  border-bottom: 1px solid var(--titlebar-border-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem
+}
+
+.titlebar > div {
+  display: flex;
+  align-items: center;
+  gap: var(--base-gap);
+  height: 100%;
+}
+
+.titlebar-btn {
+  transition: var(--base-transition);
+  border-radius: var(--base-radius);
+  height: 100%;
+  padding: 0 0.5rem;
+}
+
+.titlebar-btn:hover {
+  background-color: color-mix(in hsl, var(--titlebar-bg-clr) 80%, var(--color-mix-light) 10%);
+}
+
+.titlebar-btn:active {
+  background-color: color-mix(in hsl, var(--titlebar-bg-clr) 80%, var(--color-mix-light) 20%);
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--component-bg-clr);
+  color: var(--component-fg-clr);
+  border-right: 1px solid var(--component-border-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--base-gap);
+}
+
+.sidebar > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-gap);
+  padding: var(--base-padding);
+}
+
+/* Bottombar */
+.bottombar {
+  grid-area: bottombar;
+  background-color: var(--bottombar-bg-clr);
+  color: var(--bottombar-fg-clr);
+  border-top: 1px solid var(--bottombar-border-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--base-padding);
+}
