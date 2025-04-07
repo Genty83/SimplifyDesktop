@@ -1,19 +1,18 @@
 [data-theme='dark'] {
-  --canvas-bg-clr: hsl(210, 9%, 10%);
+  --canvas-bg-clr: hsl(210, 9%, 20%);
   --titlebar-bg-clr: hsl(210, 9%, 15%);
   --bottombar-bg-clr: hsl(210, 9%, 15%);
   --component-bg-clr: hsl(210, 9%, 15%);
-  --page-bg-clr: hsl(210, 9%, 20%);
 
+  --canvas-fg-clr: hsl(210, 9%, 90%);
   --titlebar-fg-clr: hsl(210, 9%, 90%);
   --bottombar-fg-clr: hsl(210, 9%, 90%);
   --component-fg-clr: hsl(210, 9%, 90%);
-  --page-fg-clr: hsl(210, 9%, 90%);
 
+  --canvas-border-clr-alt: hsl(210, 9%, 30%);
   --titlebar-border-clr: hsl(210, 9%, 20%);
   --bottombar-border-clr: hsl(210, 9%, 20%);
   --component-border-clr: hsl(210, 9%, 20%);
-  --page-border-clr: hsl(210, 9%, 30%);
 
   --accent-clr: hsl(210, 100%, 50%);
 
