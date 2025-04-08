@@ -19,6 +19,23 @@ button {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  align-content: center;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid;
+  height: 1px;
+  margin: 0;
+  opacity: 0.4;
+}
+
 .app-container {
   height: 100vh;
   width: 100vw;
@@ -52,3 +69,4 @@ button {
   overflow-y: auto;
   color: var(--canvas-fg-clr);
 }
+

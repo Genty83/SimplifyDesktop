@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--base-gap);
+  padding: var(--base-padding);
 }
 
 .sidebar > div {
@@ -15,4 +16,24 @@
   flex-direction: column;
   gap: var(--base-gap);
   padding: var(--base-padding);
+}
+
+/* Sidebar Button */
+.sidebar-btn {
+  height: 40px;
+  width: 100%;
+  transition: var(--base-transition);
+  border-radius: var(--base-radius);
+}
+
+.sidebar-btn:hover {
+  background-color: var(--component-hover-bg-clr);
+}
+
+.sidebar-btn:active {
+  background-color: var(--component-active-bg-clr);
+}
+
+.sidebar-divider {
+  border-color: var(--component-border-clr);
 }

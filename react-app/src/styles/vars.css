@@ -3,6 +3,8 @@
   --titlebar-bg-clr: hsl(210, 9%, 15%);
   --bottombar-bg-clr: hsl(210, 9%, 15%);
   --component-bg-clr: hsl(210, 9%, 15%);
+  --component-hover-bg-clr: hsl(210, 9%, 20%);
+  --component-active-bg-clr: hsl(210, 9%, 25%);
 
   --canvas-fg-clr: hsl(210, 9%, 90%);
   --titlebar-fg-clr: hsl(210, 9%, 90%);
