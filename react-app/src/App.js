@@ -5,6 +5,7 @@ import Bottombar from "./components/bottombar/bottombar";
 import NavMenu from "./components/nav-menu/nav-menu";
 import Breadcrumb from "./components/breadcrumb/breadcrumb";
 import Home from "./pages/home"
+import Settings from "./pages/settings";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Add more routes here as needed */}
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
         <Breadcrumb />
