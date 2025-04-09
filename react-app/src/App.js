@@ -6,6 +6,9 @@ import NavMenu from "./components/nav-menu/nav-menu";
 import Breadcrumb from "./components/breadcrumb/breadcrumb";
 import Home from "./pages/home"
 import Settings from "./pages/settings";
+import Info from "./pages/info";
+import Help from "./pages/help";
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/help" element={<Help />} />
           </Routes>
         </div>
         <Breadcrumb />
