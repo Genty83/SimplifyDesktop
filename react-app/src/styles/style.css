@@ -70,3 +70,61 @@ hr {
   color: var(--canvas-fg-clr);
 }
 
+/* 
+TABLE STYLES
+*/
+
+.table-container {
+  width: 100%;
+  min-height: 500px;
+  display: grid;
+  grid-template-rows: 40px 1fr 40px;
+  border: 2px solid var(--table-border-clr);
+  border-radius: var(--base-radius);
+  overflow: hidden;
+}
+
+.table-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--table-border-clr);
+  padding: var(--base-padding);
+}
+
+.table-middle-content {
+  display: block;
+  overflow: auto;
+}
+
+.table-bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--table-border-clr);
+  padding: var(--base-padding);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--table-header-bg-clr);
+  color: var(--table-header-fg-clr);
+  border-right: 1px solid var(--table-header-border-clr);
+  padding: var(--base-padding);
+  text-align: left;
+  font-weight: 600;
+  height: 40px;
+}
+
+td {
+  background-color: var(--table-row-bg-clr);
+  color: var(--table-row-fg-clr);
+  border: 1px solid var(--table-row-border-clr);
+  padding: var(--base-padding);
+  text-align: left;
+  height: 30px;
+  text-wrap: nowrap;
+}

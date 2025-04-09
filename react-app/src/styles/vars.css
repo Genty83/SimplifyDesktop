@@ -16,6 +16,17 @@
   --bottombar-border-clr: hsl(210, 9%, 20%);
   --component-border-clr: hsl(210, 9%, 20%);
 
+  --table-bg-clr: hsl(210, 9%, 10%);
+  --table-fg-clr: hsl(210, 9%, 90%);
+  --table-border-clr: hsl(210, 9%, 30%);
+  --table-header-bg-clr: hsl(210, 9%, 15%);
+  --table-header-fg-clr: hsl(210, 9%, 90%);
+  --table-header-border-clr: hsl(210, 9%, 30%);
+  --table-row-bg-clr: hsl(210, 9%, 20%);
+  --table-row-alt-bg-clr: hsl(210, 9%, 25%);
+  --table-row-fg-clr: hsl(210, 9%, 90%);
+  --table-row-border-clr: hsl(210, 9%, 30%);
+
   --accent-clr: hsl(210, 100%, 50%);
 
   --font-family: 'Inter', sans-serif;

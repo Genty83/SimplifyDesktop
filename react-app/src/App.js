@@ -10,7 +10,7 @@ import Info from "./pages/info";
 import Help from "./pages/help";
 
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="app-container app-layout">
